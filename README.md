@@ -1,16 +1,17 @@
-# Node.js Rest APIs with Express & MySQL example
+# Node.js Youtube API | Slogive
 
-For more detail, please visit:
-> [Build Node.js Rest APIs with Express & MySQL](https://bezkoder.com/node-js-rest-api-express-mysql/)
+## Setup
 
-> [Deploying/Hosting Node.js app on Heroku with MySQL database](https://bezkoder.com/deploy-node-js-app-heroku-cleardb-mysql/)
-
-## Project setup
 ```
-npm install
+npm i
 ```
 
-### Run
+## Run
+
 ```
 node server.js
 ```
+
+## Complements
+
+- nodemon

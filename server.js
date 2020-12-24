@@ -1,23 +1,27 @@
-const express = require("express");
-const bodyParser = require("body-parser");
+const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
 
-// parse requests of content-type - application/json
+// parse de los datos traidos en json - application/json
 app.use(bodyParser.json());
 
-// parse requests of content-type - application/x-www-form-urlencoded
+// parse encoding
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+// Index
+app.get('/', (req, res) => {
+  res.json({
+    message:
+      'Bienvenido a la API de test para el proyecto de Youtube. | Slogive',
+    status: 200,
+  });
 });
 
-require("./app/routes/customer.routes.js")(app);
+require('./app/routes/videos.routes.js')(app);
 
-// set port, listen for requests
-const PORT = process.env.PORT || 3000;
+// port, listening
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
+  console.log(`El servidor esta corriendo en el puerto: ${PORT}.`);
 });
